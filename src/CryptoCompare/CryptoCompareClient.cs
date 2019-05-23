@@ -73,6 +73,12 @@ namespace CryptoCompare
         public IExchangesClient Exchanges => new ExchangesClient(this._httpClient);
 
         /// <summary>
+        /// Gets the client for Pairs related api endpoints.
+        /// </summary>
+        /// <seealso cref="P:CryptoCompare.ICryptoCompareClient.Pairs"/>
+        public IPairsClient Pairs => new PairsClient(this._httpClient);
+
+        /// <summary>
         /// Gets the api client for market history.
         /// </summary>
         /// <seealso cref="P:CryptoCompare.ICryptoCompareClient.History"/>
